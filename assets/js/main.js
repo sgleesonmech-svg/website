@@ -7,7 +7,7 @@
      WHATSAPP must be a WhatsApp-enabled number: country code + number, digits only.
      ------------------------------------------------------------------ */
   var CONFIG = {
-    WHATSAPP: '6567958885',
+    WHATSAPP: '6587760680',
     WHATSAPP_TEXT: 'Hello Leesonmech, I would like to enquire about your products.',
     EMAIL: 'leesonmech@singnet.com.sg'
   };

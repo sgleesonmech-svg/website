@@ -1,4 +1,6 @@
-/* Product catalogue — sourced from Leesonmech's existing listing. Edit here to add or change products. */
+/* Product catalogue — sourced from Leesonmech's existing listing. Edit here to add or change products.
+   group    = the category chip on the products page (one of LM_GROUPS)
+   families = the broad 'what we supply' tiles on the About page (one or more of LM_FAMILIES) */
 window.LM_GROUPS = [
   {
     "id": "ball",
@@ -25,6 +27,10 @@ window.LM_GROUPS = [
     "name": "Sanitary & Diaphragm Valves"
   },
   {
+    "id": "pump",
+    "name": "Speck / Circutec Pumps"
+  },
+  {
     "id": "control",
     "name": "Actuation & Controls"
   },
@@ -39,6 +45,29 @@ window.LM_GROUPS = [
   {
     "id": "blower",
     "name": "Blowers"
+  }
+];
+
+window.LM_FAMILIES = [
+  {
+    "id": "valves",
+    "name": "Valves"
+  },
+  {
+    "id": "pumps",
+    "name": "Pumps"
+  },
+  {
+    "id": "instrumentation",
+    "name": "Instrumentation"
+  },
+  {
+    "id": "control",
+    "name": "Control"
+  },
+  {
+    "id": "safety",
+    "name": "Safety Products"
   }
 ];
 
@@ -60,6 +89,9 @@ window.LM_PRODUCTS = [
     ],
     "images": [
       "assets/img/products/yasiki-f304-f316-ball-valve.jpg"
+    ],
+    "families": [
+      "valves"
     ]
   },
   {
@@ -83,6 +115,9 @@ window.LM_PRODUCTS = [
     ],
     "images": [
       "assets/img/products/yasiki-ss316-3-way-ball-valve.jpg"
+    ],
+    "families": [
+      "valves"
     ]
   },
   {
@@ -108,6 +143,9 @@ window.LM_PRODUCTS = [
     ],
     "images": [
       "assets/img/products/yasiki-ss304-ss316-ball-valve.jpg"
+    ],
+    "families": [
+      "valves"
     ]
   },
   {
@@ -130,6 +168,9 @@ window.LM_PRODUCTS = [
     ],
     "images": [
       "assets/img/products/yasiki-stainless-steel-1pc-2pc-3pc-design-ball-valves.jpg"
+    ],
+    "families": [
+      "valves"
     ]
   },
   {
@@ -151,6 +192,9 @@ window.LM_PRODUCTS = [
     "images": [
       "assets/img/products/yasiki-ball-valve-with-spring-return-lever.jpg",
       "assets/img/products/yasiki-ball-valve-with-spring-return-lever-2.jpg"
+    ],
+    "families": [
+      "valves"
     ]
   },
   {
@@ -169,6 +213,9 @@ window.LM_PRODUCTS = [
     ],
     "images": [
       "assets/img/products/yasiki-a105-ball-valve.jpg"
+    ],
+    "families": [
+      "valves"
     ]
   },
   {
@@ -192,6 +239,9 @@ window.LM_PRODUCTS = [
     ],
     "images": [
       "assets/img/products/yasiki-wcb-gate-valve.jpg"
+    ],
+    "families": [
+      "valves"
     ]
   },
   {
@@ -216,6 +266,9 @@ window.LM_PRODUCTS = [
     ],
     "images": [
       "assets/img/products/yasiki-forged-steel-a105-gate-valve.jpg"
+    ],
+    "families": [
+      "valves"
     ]
   },
   {
@@ -237,6 +290,9 @@ window.LM_PRODUCTS = [
     ],
     "images": [
       "assets/img/products/yasiki-stainless-steel-304-316-gate-valve.jpg"
+    ],
+    "families": [
+      "valves"
     ]
   },
   {
@@ -260,6 +316,9 @@ window.LM_PRODUCTS = [
     ],
     "images": [
       "assets/img/products/yasiki-a105-forged-carbon-steel-gate-valve.jpg"
+    ],
+    "families": [
+      "valves"
     ]
   },
   {
@@ -278,6 +337,9 @@ window.LM_PRODUCTS = [
     ],
     "images": [
       "assets/img/products/yasiki-ductile-iron-resilent-gate-valve.jpg"
+    ],
+    "families": [
+      "valves"
     ]
   },
   {
@@ -300,6 +362,9 @@ window.LM_PRODUCTS = [
     ],
     "images": [
       "assets/img/products/yasiki-ss304-ss316-globe-valve.jpg"
+    ],
+    "families": [
+      "valves"
     ]
   },
   {
@@ -319,6 +384,31 @@ window.LM_PRODUCTS = [
     ],
     "images": [
       "assets/img/products/yasiki-bronze-globe-valve.jpg"
+    ],
+    "families": [
+      "valves"
+    ]
+  },
+  {
+    "slug": "yasiki-ductile-iron-globe-valve",
+    "name": "YASIKI Ductile Iron Globe Valve",
+    "group": "globe",
+    "brand": "YASIKI",
+    "origin": "Malaysia",
+    "summary": "YASIKI Ductile Iron Globe Valve, 16K, 20K",
+    "lead": "YASIKI Ductile Iron Globe Valve",
+    "features": [
+      "16K",
+      "20K"
+    ],
+    "tags": [
+      "Globe Valves"
+    ],
+    "images": [
+      "assets/img/products/yasiki-ductile-iron-globe-valve.jpg"
+    ],
+    "families": [
+      "valves"
     ]
   },
   {
@@ -338,6 +428,9 @@ window.LM_PRODUCTS = [
     ],
     "images": [
       "assets/img/products/yasiki-stainless-steel-disc-check-valve.jpg"
+    ],
+    "families": [
+      "valves"
     ]
   },
   {
@@ -354,6 +447,9 @@ window.LM_PRODUCTS = [
     ],
     "images": [
       "assets/img/products/yasiki-single-door-flap-check-valve.jpg"
+    ],
+    "families": [
+      "valves"
     ]
   },
   {
@@ -372,6 +468,9 @@ window.LM_PRODUCTS = [
     ],
     "images": [
       "assets/img/products/yasiki-wcb-swing-check-valve.jpg"
+    ],
+    "families": [
+      "valves"
     ]
   },
   {
@@ -396,6 +495,9 @@ window.LM_PRODUCTS = [
     ],
     "images": [
       "assets/img/products/yasiki-cast-iron-stainless-steel-duo-check-valve.jpg"
+    ],
+    "families": [
+      "valves"
     ]
   },
   {
@@ -426,6 +528,9 @@ window.LM_PRODUCTS = [
     ],
     "images": [
       "assets/img/products/okumura-japan-butterfly-valve.jpg"
+    ],
+    "families": [
+      "valves"
     ]
   },
   {
@@ -446,6 +551,9 @@ window.LM_PRODUCTS = [
     ],
     "images": [
       "assets/img/products/yasiki-modulating-electric-actuated-sanitary-ball-valve.jpg"
+    ],
+    "families": [
+      "valves"
     ]
   },
   {
@@ -470,6 +578,86 @@ window.LM_PRODUCTS = [
     ],
     "images": [
       "assets/img/products/yasiki-cs-ss-diaphragm-valve.jpg"
+    ],
+    "families": [
+      "valves"
+    ]
+  },
+  {
+    "slug": "speck-multistage-pump-pn63",
+    "name": "SPECK Multistage Centrifugal Pump PN63",
+    "group": "pump",
+    "brand": "SPECK / CIRCUTEC",
+    "origin": "Germany",
+    "summary": "SPECK multistage centrifugal pump, PN63 pressure rating. Speck Pumpen (Germany), now rebranded Circutec.",
+    "lead": "SPECK Multistage Centrifugal Pump",
+    "features": [
+      "PN63",
+      "Multistage centrifugal",
+      "Speck Pumpen / Circutec"
+    ],
+    "tags": [
+      "Pumps",
+      "Centrifugal Pumps"
+    ],
+    "images": [
+      "assets/img/products/speck-multistage-pump-pn63.jpg",
+      "assets/img/products/speck-multistage-pump-pn63-2.jpg",
+      "assets/img/products/speck-multistage-pump-pn63-3.jpg"
+    ],
+    "families": [
+      "pumps"
+    ]
+  },
+  {
+    "slug": "speck-small-pumps-magnetic-coupling",
+    "name": "SPECK Small Pumps — Magnetic Coupling",
+    "group": "pump",
+    "brand": "SPECK / CIRCUTEC",
+    "origin": "Germany",
+    "summary": "SPECK small pump range with magnetic coupling — sealless drive. Speck Pumpen (Germany), now rebranded Circutec.",
+    "lead": "SPECK Small Pumps",
+    "features": [
+      "Magnetic coupling",
+      "Sealless",
+      "Speck Pumpen / Circutec"
+    ],
+    "tags": [
+      "Pumps",
+      "Small Pumps"
+    ],
+    "images": [
+      "assets/img/products/speck-small-pumps-magnetic-coupling.jpg",
+      "assets/img/products/speck-small-pumps-magnetic-coupling-2.jpg",
+      "assets/img/products/speck-small-pumps-magnetic-coupling-3.jpg"
+    ],
+    "families": [
+      "pumps"
+    ]
+  },
+  {
+    "slug": "speck-small-pumps-shaft-sealing",
+    "name": "SPECK Small Pumps — Shaft Sealing",
+    "group": "pump",
+    "brand": "SPECK / CIRCUTEC",
+    "origin": "Germany",
+    "summary": "SPECK small pump range with mechanical shaft sealing. Speck Pumpen (Germany), now rebranded Circutec.",
+    "lead": "SPECK Small Pumps",
+    "features": [
+      "Shaft sealing",
+      "Speck Pumpen / Circutec"
+    ],
+    "tags": [
+      "Pumps",
+      "Small Pumps"
+    ],
+    "images": [
+      "assets/img/products/speck-small-pumps-shaft-sealing.jpg",
+      "assets/img/products/speck-small-pumps-shaft-sealing-2.jpg",
+      "assets/img/products/speck-small-pumps-shaft-sealing-3.jpg"
+    ],
+    "families": [
+      "pumps"
     ]
   },
   {
@@ -496,6 +684,9 @@ window.LM_PRODUCTS = [
       "assets/img/products/yasiki-brass-ss-solenoid-valves-2.jpg",
       "assets/img/products/yasiki-brass-ss-solenoid-valves-3.jpg",
       "assets/img/products/yasiki-brass-ss-solenoid-valves-4.jpg"
+    ],
+    "families": [
+      "control"
     ]
   },
   {
@@ -515,6 +706,9 @@ window.LM_PRODUCTS = [
     ],
     "images": [
       "assets/img/products/yasiki-pneumatic-actuator-ball-valve.jpg"
+    ],
+    "families": [
+      "control"
     ]
   },
   {
@@ -533,6 +727,9 @@ window.LM_PRODUCTS = [
     ],
     "images": [
       "assets/img/products/yasiki-pneumatic-air-regulator.jpg"
+    ],
+    "families": [
+      "control"
     ]
   },
   {
@@ -557,6 +754,34 @@ window.LM_PRODUCTS = [
     ],
     "images": [
       "assets/img/products/yasiki-electric-on-off-modulating-actuator-ball-valve.jpg"
+    ],
+    "families": [
+      "control"
+    ]
+  },
+  {
+    "slug": "yasiki-limit-switch",
+    "name": "YASIKI Limit Switch",
+    "group": "control",
+    "brand": "YASIKI",
+    "origin": "Malaysia",
+    "summary": "YASIKI Limit Switch, IP67, Weather-proof, Explosion-proof",
+    "lead": "YASIKI Limit Switch",
+    "features": [
+      "IP67",
+      "Weather-proof",
+      "Explosion-proof"
+    ],
+    "tags": [
+      "Controls",
+      "Limit Switches"
+    ],
+    "images": [
+      "assets/img/products/yasiki-limit-switch.jpg"
+    ],
+    "families": [
+      "control",
+      "safety"
     ]
   },
   {
@@ -578,6 +803,9 @@ window.LM_PRODUCTS = [
     ],
     "images": [
       "assets/img/products/yasiki-thermometer.jpg"
+    ],
+    "families": [
+      "instrumentation"
     ]
   },
   {
@@ -601,6 +829,9 @@ window.LM_PRODUCTS = [
     ],
     "images": [
       "assets/img/products/yasiki-general-purpose-black-casing-pressure-gauge.jpg"
+    ],
+    "families": [
+      "instrumentation"
     ]
   },
   {
@@ -622,6 +853,9 @@ window.LM_PRODUCTS = [
     ],
     "images": [
       "assets/img/products/yasiki-bi-metallic-temperature-gauge.jpg"
+    ],
+    "families": [
+      "instrumentation"
     ]
   },
   {
@@ -643,6 +877,9 @@ window.LM_PRODUCTS = [
     ],
     "images": [
       "assets/img/products/yasiki-ss-brass-water-meter.jpg"
+    ],
+    "families": [
+      "instrumentation"
     ]
   },
   {
@@ -664,6 +901,9 @@ window.LM_PRODUCTS = [
     ],
     "images": [
       "assets/img/products/yasiki-instrument-valve-and-manifold.jpg"
+    ],
+    "families": [
+      "instrumentation"
     ]
   },
   {
@@ -686,6 +926,9 @@ window.LM_PRODUCTS = [
     ],
     "images": [
       "assets/img/products/yasiki-fully-stainless-steel-pressure-gauge.jpg"
+    ],
+    "families": [
+      "instrumentation"
     ]
   },
   {
@@ -709,6 +952,9 @@ window.LM_PRODUCTS = [
     ],
     "images": [
       "assets/img/products/yasiki-a105-y-strainer.jpg"
+    ],
+    "families": [
+      "valves"
     ]
   },
   {
@@ -734,6 +980,9 @@ window.LM_PRODUCTS = [
     ],
     "images": [
       "assets/img/products/yasiki-sight-glass.jpg"
+    ],
+    "families": [
+      "valves"
     ]
   },
   {
@@ -757,6 +1006,9 @@ window.LM_PRODUCTS = [
     "images": [
       "assets/img/products/yasiki-auto-air-vent.jpg",
       "assets/img/products/yasiki-auto-air-vent-2.jpg"
+    ],
+    "families": [
+      "valves"
     ]
   },
   {
@@ -776,6 +1028,9 @@ window.LM_PRODUCTS = [
     ],
     "images": [
       "assets/img/products/yasiki-direct-activated-pressure-reducing-valve.jpg"
+    ],
+    "families": [
+      "valves"
     ]
   },
   {
@@ -804,6 +1059,9 @@ window.LM_PRODUCTS = [
     ],
     "images": [
       "assets/img/products/meidinger-ag-switzerland-atex-blower.jpg"
+    ],
+    "families": [
+      "safety"
     ]
   }
 ];

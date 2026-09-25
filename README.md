@@ -34,6 +34,7 @@ assets/
   js/globe.js            interactive globe in the "Regional presence" section
   js/globe-data.js       land dots for the globe (generated; no need to edit)
   img/products/          product photos, one square JPG per product
+  img/brands/            principal logos (Okumura, Speck, Circutec, Meidinger, Yasiki)
   img/bg/                page background photos
   img/valve.webp/.png    cut-out valve used in the home hero
 ```
@@ -59,6 +60,7 @@ var CONFIG = {
   "slug": "yasiki-a105-ball-valve",         // unique id, used in links
   "name": "YASIKI A105 Ball Valve",
   "group": "ball",                           // category id from LM_GROUPS at the top of the file
+  "families": ["valves"],                    // broad family for the About page tiles (LM_FAMILIES)
   "brand": "YASIKI",
   "origin": "Malaysia",
   "summary": "…",                            // shown on the card and in the popup

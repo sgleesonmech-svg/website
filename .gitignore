@@ -9,3 +9,8 @@
 *.png
 !assets/img/*.png
 !assets/img/**/*.png
+
+# Client-supplied originals kept at the project root (processed copies live in assets/img/)
+/*.jpg
+/*.jpeg
+/*.docx

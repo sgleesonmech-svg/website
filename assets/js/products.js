@@ -17,7 +17,9 @@
 
   var ARROW = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
   var params = new URLSearchParams(location.search);
-  var state = { cat: groupName[params.get('cat')] ? params.get('cat') : 'all', q: '' };
+  var FAMILIES = {};
+  (window.LM_FAMILIES || []).forEach(function (f) { FAMILIES[f.id] = f.name; });
+  var state = { cat: groupName[params.get('cat')] ? params.get('cat') : 'all', family: FAMILIES[params.get('family')] ? params.get('family') : null, q: '' };
 
   /* ---------- chips ---------- */
   var chipData = [{ id: 'all', name: 'All Products', n: PRODUCTS.length }].concat(GROUPS.map(function (g) {
@@ -30,7 +32,9 @@
     var b = e.target.closest('.chip');
     if (!b) return;
     state.cat = b.getAttribute('data-cat');
+    state.family = null;
     var url = new URL(location.href);
+    url.searchParams.delete('family');
     if (state.cat === 'all') url.searchParams.delete('cat'); else url.searchParams.set('cat', state.cat);
     history.replaceState(null, '', url);
     render(true);
@@ -50,7 +54,8 @@
   var emptyEl = document.getElementById('product-empty');
 
   function matches(p) {
-    if (state.cat !== 'all' && p.group !== state.cat) return false;
+    if (state.family) { if ((p.families || []).indexOf(state.family) === -1) return false; }
+    else if (state.cat !== 'all' && p.group !== state.cat) return false;
     if (!state.q) return true;
     var hay = (p.name + ' ' + p.summary + ' ' + p.brand + ' ' + p.tags.join(' ') + ' ' + groupName[p.group]).toLowerCase();
     return state.q.split(/\s+/).every(function (w) { return hay.indexOf(w) !== -1; });
@@ -71,12 +76,12 @@
     });
     emptyEl.hidden = shown !== 0;
     Array.prototype.forEach.call(chipsEl.children, function (c) {
-      var on = c.getAttribute('data-cat') === state.cat;
+      var on = !state.family && c.getAttribute('data-cat') === state.cat;
       c.classList.toggle('is-active', on);
       c.setAttribute('aria-selected', String(on));
       if (on && scroll) c.scrollIntoView({ inline: 'center', block: 'nearest', behavior: 'smooth' });
     });
-    titleEl.textContent = state.cat === 'all' ? 'All Products' : groupName[state.cat];
+    titleEl.textContent = state.family ? FAMILIES[state.family] : (state.cat === 'all' ? 'All Products' : groupName[state.cat]);
     countEl.textContent = shown + (shown === 1 ? ' product' : ' products') + (state.q ? ' matching “' + searchEl.value.trim() + '”' : '');
     if (scroll) {
       var top = document.getElementById('catalogue').getBoundingClientRect().top + window.scrollY - 130;
