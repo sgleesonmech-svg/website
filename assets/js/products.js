@@ -33,13 +33,25 @@
     if (!b) return;
     state.cat = b.getAttribute('data-cat');
     state.family = null;
+    state.q = ''; searchEl.value = '';
     var url = new URL(location.href);
     url.searchParams.delete('family');
     if (state.cat === 'all') url.searchParams.delete('cat'); else url.searchParams.set('cat', state.cat);
     history.replaceState(null, '', url);
     render(true);
   });
-  searchEl.addEventListener('input', function () { state.q = searchEl.value.trim().toLowerCase(); render(false); });
+  searchEl.addEventListener('input', function () {
+    state.q = searchEl.value.trim().toLowerCase();
+    // search always covers every product, so drop any category / family filter
+    if (state.q && (state.cat !== 'all' || state.family)) {
+      state.cat = 'all'; state.family = null;
+      var url = new URL(location.href);
+      url.searchParams.delete('cat'); url.searchParams.delete('family');
+      history.replaceState(null, '', url);
+    }
+    render(false);
+  });
+  searchEl.addEventListener('keydown', function (e) { if (e.key === 'Enter') searchEl.blur(); }); // closes the phone keyboard
 
   /* ---------- grid ---------- */
   grid.innerHTML = PRODUCTS.map(function (p) {
