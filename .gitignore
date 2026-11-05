@@ -14,3 +14,6 @@
 /*.jpg
 /*.jpeg
 /*.docx
+
+# local demo reports, never deployed
+reports/
