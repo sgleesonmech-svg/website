@@ -183,7 +183,7 @@
     catsEl.innerHTML = window.LM_GROUPS.map(function (g, i) {
       var items = window.LM_PRODUCTS.filter(function (p) { return p.group === g.id; });
       if (!items.length) return '';
-      return '<a class="cat" data-reveal style="--d:' + (i % 5) + '" href="products.html?cat=' + g.id + '">' +
+      return '<a class="cat" data-reveal style="--d:' + (i % 5) + '" href="/products?cat=' + g.id + '">' +
         '<div class="cat__img"><img src="' + items[0].images[0] + '" alt="' + esc(g.name) + '" loading="lazy" width="800" height="800"></div>' +
         '<div class="cat__body"><div><h3>' + esc(g.name) + '</h3><small>' + items.length + (items.length === 1 ? ' product' : ' products') + '</small></div>' + ARROW + '</div></a>';
     }).join('');
@@ -197,7 +197,7 @@
     featEl.innerHTML = picks.map(function (slug, i) {
       var p = window.LM_PRODUCTS.filter(function (x) { return x.slug === slug; })[0];
       if (!p) return '';
-      return '<a class="pcard" data-reveal style="--d:' + (i % 4) + '" href="products.html#' + p.slug + '">' +
+      return '<a class="pcard" data-reveal style="--d:' + (i % 4) + '" href="/products#' + p.slug + '">' +
         '<div class="pcard__img"><img src="' + p.images[0] + '" alt="' + esc(p.name) + '" loading="lazy" width="800" height="800">' +
         '<span class="pcard__view">View details ' + ARROW + '</span></div>' +
         '<div class="pcard__body"><span class="pcard__cat">' + esc(groupName[p.group]) + '</span><h3 class="pcard__name">' + esc(p.name) + '</h3><p class="pcard__sum">' + esc(p.summary) + '</p></div></a>';

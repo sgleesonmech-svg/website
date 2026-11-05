@@ -61,7 +61,7 @@
       '<span class="pcard__view">View details ' + ARROW + '</span></div>' +
       '<div class="pcard__body"><span class="pcard__cat">' + esc(groupName[p.group]) + '</span>' +
       '<h3 class="pcard__name">' + esc(p.name) + '</h3><p class="pcard__sum">' + esc(p.summary) + '</p></div></button>';
-  }).join('') + '<div class="empty" id="product-empty" hidden><h3 class="h-md">No products match your search</h3><p>Try a different keyword, or ask us directly — we stock far more than is listed here.</p><a class="btn btn--sm" href="contact.html">Ask our team</a></div>';
+  }).join('') + '<div class="empty" id="product-empty" hidden><h3 class="h-md">No products match your search</h3><p>Try a different keyword, or ask us directly — we stock far more than is listed here.</p><a class="btn btn--sm" href="/contact">Ask our team</a></div>';
   var cards = Array.prototype.slice.call(grid.querySelectorAll('.pcard'));
   var emptyEl = document.getElementById('product-empty');
 
@@ -114,7 +114,7 @@
       '<div class="modal__gallery"><div class="modal__main"><img src="' + p.images[0] + '" alt="' + esc(p.name) + '"></div>' + thumbs + '</div>' +
       '<div class="modal__info"><div class="modal__meta"><span class="pill pill--brand">' + esc(p.brand) + '</span><span class="pill pill--o">' + esc(p.origin) + '</span><span class="pill">' + esc(groupName[p.group]) + '</span></div>' +
       '<h2 id="modal-title">' + esc(p.name) + '</h2><p>' + esc(p.summary) + '</p>' + specs +
-      '<div class="modal__actions"><a class="btn" href="contact.html?product=' + p.slug + '">Request a Quote ' + ARROW.replace('<svg', '<svg class="arrow"') + '</a>' +
+      '<div class="modal__actions"><a class="btn" href="/contact?product=' + p.slug + '">Request a Quote ' + ARROW.replace('<svg', '<svg class="arrow"') + '</a>' +
       '<a class="btn btn--wa" target="_blank" rel="noopener" href="' + window.LM_waLink('Hello Leesonmech, I would like to enquire about: ' + p.name) + '">WhatsApp Us</a></div></div>';
     modal.classList.add('is-open');
     modal.setAttribute('aria-hidden', 'false');
@@ -151,7 +151,7 @@
 
   render(false);
 
-  // Deep link: products.html#product-slug opens that product
+  // Deep link: /products#product-slug opens that product
   var hash = decodeURIComponent(location.hash.slice(1));
   var linked = hash && PRODUCTS.filter(function (x) { return x.slug === hash; })[0];
   if (linked) setTimeout(function () { openModal(linked, false); }, 900);
